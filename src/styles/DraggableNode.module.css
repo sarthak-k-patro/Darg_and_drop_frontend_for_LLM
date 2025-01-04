@@ -18,7 +18,7 @@
   background-color: #086647;
 }
 
-:global(.dark) draggableNode {
+:global(.dark) .draggableNode {
   background-color: #086647;
 }
 
