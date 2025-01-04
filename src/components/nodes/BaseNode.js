@@ -17,7 +17,7 @@ export const BaseNode = ({
 
   return (
     <motion.div
-      className={`${styles.baseNode} ${selected ? styles.selectedNode : ""} `}
+      className={`${styles.baseNode} ${selected ? styles.selectedNode : ""}`}
       style={style}
     >
       {icon && <div className={styles.nodeIcon}>{icon}</div>}
@@ -31,7 +31,7 @@ export const BaseNode = ({
               position={h.position || Position.Left}
               id={`${id}-${h.id}`}
               className={`${styles.handle} ${styles.handleTarget}`}
-              style={{ ...h.style }}
+              style={{ ...h.style }} // Handle style remains unchanged
             />
             {h.label && (
               <div
@@ -39,6 +39,7 @@ export const BaseNode = ({
                 style={{
                   top: topPosition - 7,
                   left: isLeft ? "-25px" : undefined,
+                  ...h.labelStyle, // Apply dynamic label styling here
                 }}
               >
                 {h.label}
