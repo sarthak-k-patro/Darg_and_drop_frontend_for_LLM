@@ -45,7 +45,7 @@ export const PipelineUI = () => {
     setHighlightNodeId(nodeId);
   };
   //   Called when user finisher/cancels a connection
-  const onConnectEndHandler = (event, { connection }) => {
+  const onConnectEndHandler = () => {
     setHighlightNodeId(null);
   };
 

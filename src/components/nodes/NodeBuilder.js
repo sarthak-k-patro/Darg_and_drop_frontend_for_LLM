@@ -7,7 +7,7 @@ import { nodeConfigs } from "./NodeConfig";
 // * Matches double curly braces containing letters, digits, underscores, or $,
 // * starting with a letter, underscore, or $.
 
-const variableRegex = /{{\s*([a-zA-Z_$][0-9a-zA-Z_$])\s}}/g;
+const variableRegex = /\{\{\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\}\}/g;
 
 export const NodeBuilder = ({ id, data }) => {
   // Find the config for the current node type
@@ -70,14 +70,14 @@ export const NodeBuilder = ({ id, data }) => {
   }, [fieldState.text]);
 
   // Handle field changes
-  const handlechange = (key, value) => {
+  const handleChange = (key, value) => {
     setFieldState((prev) => ({
       ...prev,
       [key]: value,
     }));
   };
   if (!config) {
-    return <BaseNode id={id} title="Unknown Node Config Not provided" />;
+    return <BaseNode id={id} title="Unknown Node" />;
   }
 
   const allInputHandles = [...(config.inputHandles || []), ...variableHandles];
@@ -104,7 +104,7 @@ export const NodeBuilder = ({ id, data }) => {
                   boxSizing: "border-box",
                 }}
                 value={fieldState[field.key]}
-                onchange={(e) => handlechange(field.key, e.target.value)}
+                onChange={(e) => handleChange(field.key, e.target.value)}
               />
             </label>
           );
@@ -115,7 +115,7 @@ export const NodeBuilder = ({ id, data }) => {
             <input
               type="text"
               value={fieldState[field.key]}
-              onchange={(e) => handlechange(field.key, e.target.value)}
+              onChange={(e) => handleChange(field.key, e.target.value)}
             />
           </label>
         );

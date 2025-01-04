@@ -15,6 +15,7 @@ export const DraggableNode = ({ type, label, icon }) => {
       className={styles.draggableNode}
       onDragStart={(event) => onDragStart(event, type)}
       onDragEnd={(event) => (event.target.style.cursor = "grab")}
+      draggable
     >
       <span className={styles.draggableNodeLabel}>
         {icon && <span className={styles.nodeIcon}>{icon}</span>}
