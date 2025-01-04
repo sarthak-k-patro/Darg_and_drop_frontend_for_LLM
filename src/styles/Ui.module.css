@@ -1,0 +1,22 @@
+.uiContainer {
+  width: 100vw;
+  height: 71vh;
+  background-color: #f3b03536;
+  transition: background-color 0.3s ease;
+}
+
+:global(.dark) .uiContainer {
+  background-color: #212937;
+}
+.flowArea {
+  width: 100% !important;
+  height: 100% !important;
+}
+.highlightedNode {
+  box-shadow: 0 0 0 5px #e37500; /* Light mode highlight color */
+  border-radius: 7%;
+  transition: box-shadow 0.2s ease;
+}
+:global(.dark) highlightedNode {
+  box-shadow: 0 0 0 5px #48cb43; /* Dark mode highlight color */
+}

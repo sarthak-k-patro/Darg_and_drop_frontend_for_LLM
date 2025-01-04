@@ -11,7 +11,7 @@ export const nodeConfigs = [
       { key: "inputName", label: "Name", default: "InputName" },
       {
         key: "inputType",
-        label: "Type",
+        label: "Type:",
         default: "Text",
         type: "select",
         options: ["Text", "File"],
@@ -44,7 +44,7 @@ export const nodeConfigs = [
       { key: "outputName", label: "Name:", default: "OutputName" },
       {
         key: "outputType",
-        label: "Type",
+        label: "Type:",
         default: "Text",
       },
     ],
@@ -55,6 +55,6 @@ export const nodeConfigs = [
     title: "Text Node",
     inputHandles: [],
     outputHandles: [{ id: "output" }],
-    fields: [{ key: "text", label: "Text", default: "{{input}}" }],
+    fields: [{ key: "text", label: "Text:", default: "{{input}}" }],
   },
 ];

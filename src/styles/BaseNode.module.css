@@ -1,0 +1,112 @@
+.baseNode {
+  position: relative;
+  width: 250px;
+  min-height: 100px;
+  padding: 16px;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid #e5e7eb;
+  transition: transform 0.2s;
+}
+
+.baseNode:hover {
+  transform: scale(1.02);
+}
+
+:global(.dark) .baseNode {
+  background-color: #edce95d5;
+  border-color: #e2e8f1;
+}
+
+.handle {
+  width: 12px !important;
+  height: 12px !important;
+  border-radius: 50%;
+  border: 1.5px solid rgb(0, 0, 0) limportant;
+}
+.handleTarget {
+  background-color: #3b82f6 !important;
+}
+
+.handleSource {
+  background-color: #106981 !important;
+}
+
+.title {
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #000000;
+}
+
+:global(.dark) .title {
+  color: #1f2937;
+}
+
+.children label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #1650a0;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.children label input,
+.children label select {
+  margin-left: 0.5rem;
+  padding: 0.3rem;
+  border: 3px solid #33d0ae;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.children label textarea {
+  margin-left: 0.5rem;
+  padding: 0.3rem;
+  border: 3px solid #33d0ae;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: inherit;
+  box-sizing: border-box;
+}
+
+:global(.dark).children label {
+  color: #111827;
+}
+
+:global(.dark) .children label input,
+:global(.dark) .children label select,
+:global(.dark) .children label textarea {
+  background-color: #f1f5fc;
+  border: 3px solid #0e86db;
+}
+
+.selectedNode {
+  border: 20px solid #fbfcff !important;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.5) !important;
+}
+
+:global(.dark).selectedNode {
+  border: 2px solid #38bdf8;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+}
+
+.handleLabel {
+  position: absolute;
+  pointer-events: none;
+  font-size: 0.85rem;
+  color: #0f172a;
+  font-weight: 500;
+}
+
+:global(.dark) .handleLabel {
+  color: #111827;
+}
+
+.nodeIcon {
+  position: relative;
+  font-size: 1.1rem;
+  pointer-events: none;
+}
