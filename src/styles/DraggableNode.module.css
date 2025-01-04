@@ -1,0 +1,46 @@
+.draggableNode {
+  cursor: grab;
+  min-width: 80px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 8px;
+  background-color: #00496b;
+  color: #ffffff;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.draggableNode:active {
+  cursor: grabbing !important;
+  transform: scale(1.05);
+  background-color: #086647;
+}
+
+:global(.dark) draggableNode {
+  background-color: #086647;
+}
+
+:global(.dark) .draggableNode:active {
+  background-color: #0d4895;
+}
+
+.draggableNodeLabel {
+  color: #ffffff;
+  margin: 5px;
+  padding: 5px;
+  transition: color 0.3s ease;
+}
+
+:global(.dark) .draggableNodeLabel {
+  color: #d1d5db;
+}
+
+.nodeIcon {
+  margin-right: 10px;
+  padding: 10px;
+  position: relative;
+  bottom: 5px;
+  font-size: 1rem;
+}

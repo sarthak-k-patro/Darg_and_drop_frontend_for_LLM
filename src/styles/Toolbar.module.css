@@ -1,0 +1,42 @@
+.toolbar {
+  padding: 10px;
+
+  background-color: #ffffff; /* Light mode background */
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  transition: background-color 0.3s ease;
+}
+
+:global(.dark) .toolbar {
+  background-color: #1f2937;
+}
+.nodeList {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+}
+
+.toggleButton {
+  background: none;
+
+  border: none;
+
+  cursor: pointer;
+
+  font-size: 1.5rem;
+
+  color: #164c98; /* Light mode icon color */
+
+  transition: color 0.3s ease;
+}
+
+:global(.dark).toggleButton {
+  color: #e5e7eb;
+}
