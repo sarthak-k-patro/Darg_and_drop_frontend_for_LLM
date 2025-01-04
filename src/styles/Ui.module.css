@@ -13,10 +13,10 @@
   height: 100% !important;
 }
 .highlightedNode {
-  box-shadow: 0 0 0 5px #e37500; /* Light mode highlight color */
+  box-shadow: 0 0 0 5px rgba(15, 76, 175, 0.5); /* Light mode highlight color */
   border-radius: 7%;
   transition: box-shadow 0.2s ease;
 }
-:global(.dark) highlightedNode {
+:global(.dark) .highlightedNode {
   box-shadow: 0 0 0 5px #48cb43; /* Dark mode highlight color */
 }

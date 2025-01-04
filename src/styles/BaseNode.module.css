@@ -12,7 +12,12 @@
 }
 
 .baseNode:hover {
-  transform: scale(1.02);
+  border-color: rgba(15, 76, 175, 0.5);
+  border-width: 5px;
+}
+:global(.dark) .baseNode:hover {
+  border-color: rgb(243, 219, 0);
+  border-width: 5px;
 }
 
 :global(.dark) .baseNode {
