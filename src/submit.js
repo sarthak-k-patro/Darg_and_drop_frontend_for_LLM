@@ -6,8 +6,6 @@ export const SubmitButton = () => {
     edges: state.edges,
   }));
 
-  console.log("Nodes:", nodes);
-  console.log("Edges:", edges);
   const handleSubmit = async () => {
     // Extract node IDs and edge connections
     const nodeIds = nodes.map((node) => node.id);
