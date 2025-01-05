@@ -1,4 +1,6 @@
 import styles from "../styles/DraggableNode.module.css";
+
+// The Draggable nodes in the toolbar (top bar where nodes are present)
 export const DraggableNode = ({ type, label, icon }) => {
   const onDragStart = (event, nodeType) => {
     const appData = { nodeType };

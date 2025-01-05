@@ -2,7 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import { BaseNode } from "./BaseNode";
 import { Position } from "reactflow";
 import { nodeConfigs } from "./NodeConfig";
-
+// Uses BaseNode to build the nodes for different configurations
+//  for valid JS variable
 const variableRegex = /\{\{\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\}\}/g;
 
 export const NodeBuilder = ({ id, data }) => {
@@ -35,15 +36,15 @@ export const NodeBuilder = ({ id, data }) => {
 
       const dynamicHandles = matches.map((match, index) => {
         const labelStyle = {
-          left: `-${match[1].length * 7.5}px `,
+          left: `-${match[1].length * 7.5}px `, // as variable length increase it goes left
           color: "#106981",
         };
         return {
           id: `var-${match[1]}`,
           position: Position.Left,
           style: { top: 50 + index * 20 },
-          label: match[1],
-          labelStyle,
+          label: match[1], //show the variable in textNode
+          labelStyle, //Styling for the variable label
         };
       });
       setVariableHandles(dynamicHandles);

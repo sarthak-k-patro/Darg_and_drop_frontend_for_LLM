@@ -12,7 +12,6 @@ function CustomEdge({
   markerEnd,
   data,
 }) {
-  // data may contain: { onEdgeRemove }
   const onEdgeRemove = data?.onEdgeRemove;
   //  detect dark mode from html
   const isDarkMode = document.documentElement.classList.contains("dark");

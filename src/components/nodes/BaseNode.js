@@ -37,7 +37,7 @@ export const BaseNode = ({
               position={h.position || Position.Left}
               id={`${id}-${h.id}`}
               className={`${styles.handle} ${styles.handleTarget}`}
-              style={{ ...h.style }} // Handle style remains unchanged
+              style={{ ...h.style }}
             />
             {h.label && (
               <div
