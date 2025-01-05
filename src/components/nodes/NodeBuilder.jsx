@@ -36,7 +36,7 @@ export const NodeBuilder = ({ id, data }) => {
 
       const dynamicHandles = matches.map((match, index) => {
         const labelStyle = {
-          left: `-${match[1].length * 7.5}px `, // as variable length increase it goes left
+          left: `-${match[1].length * 7.5 + 2}px `, // as variable length increase it goes left
           color: "#106981",
         };
         return {
