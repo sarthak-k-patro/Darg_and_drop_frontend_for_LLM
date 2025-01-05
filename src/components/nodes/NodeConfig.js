@@ -1,4 +1,9 @@
-import { FaArrowRight, FaRobot, FaSignOutAlt } from "react-icons/fa";
+import {
+  FaArrowRight,
+  FaRobot,
+  FaSignOutAlt,
+  FaStickyNote,
+} from "react-icons/fa";
 export const nodeConfigs = [
   {
     type: "inputNode",
@@ -23,7 +28,7 @@ export const nodeConfigs = [
     label: "LLM",
     title: "LLM Node",
     icon: <FaRobot />,
-    inputHandles: [{ id: "system" }, { id: "prompt" }],
+    inputHandles: [{ id: "prompt" }],
     outputHandles: [{ id: "response" }],
     fields: [
       {
@@ -53,6 +58,61 @@ export const nodeConfigs = [
     type: "textNode",
     label: "Text",
     title: "Text Node",
+    icon: <FaStickyNote />,
+    inputHandles: [],
+    outputHandles: [{ id: "output" }],
+    fields: [{ key: "text", label: "Text:", default: "{{input}}" }],
+  },
+  {
+    type: "textNode",
+    label: "TextA",
+    title: "Text Node",
+    icon: <FaStickyNote />,
+    inputHandles: [],
+    outputHandles: [{ id: "output" }],
+    fields: [{ key: "text", label: "Text:", default: "{{input}}" }],
+  },
+  {
+    type: "textNode",
+    label: "TextB",
+    title: "Text Node",
+    icon: <FaStickyNote />,
+    inputHandles: [],
+    outputHandles: [{ id: "output" }],
+    fields: [{ key: "text", label: "Text:", default: "{{input}}" }],
+  },
+  {
+    type: "inputNode",
+    label: "InputA",
+    title: "Input Node",
+    icon: <FaArrowRight />,
+    inputHandles: [],
+    outputHandles: [{ id: "value" }],
+    fields: [
+      { key: "inputName", label: "Name", default: "InputName" },
+      {
+        key: "inputType",
+        label: "Type:",
+        default: "Text",
+        type: "select",
+        options: ["Text", "File"],
+      },
+    ],
+  },
+  {
+    type: "outputNode",
+    label: "OutputA",
+    title: "Text Node",
+    icon: <FaSignOutAlt />,
+    inputHandles: [],
+    outputHandles: [{ id: "output" }],
+    fields: [{ key: "text", label: "Text:", default: "{{input}}" }],
+  },
+  {
+    type: "outputNode",
+    label: "OutputB",
+    title: "Text Node",
+    icon: <FaSignOutAlt />,
     inputHandles: [],
     outputHandles: [{ id: "output" }],
     fields: [{ key: "text", label: "Text:", default: "{{input}}" }],

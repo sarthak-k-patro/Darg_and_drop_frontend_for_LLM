@@ -1,6 +1,6 @@
 .toolbar {
   padding: 10px;
-  background-color: #ffffff; /* Light mode background */
+  background-color: #f1eaea; /* Light mode background */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -8,7 +8,7 @@
 }
 
 :global(.dark) .toolbar {
-  background-color: #1f2937;
+  background-color: #2a3749;
 }
 .nodeList {
   display: flex;
