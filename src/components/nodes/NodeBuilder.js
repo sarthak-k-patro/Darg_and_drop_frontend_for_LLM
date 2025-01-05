@@ -36,6 +36,7 @@ export const NodeBuilder = ({ id, data }) => {
       const dynamicHandles = matches.map((match, index) => {
         const labelStyle = {
           left: `-${match[1].length * 7.5}px `,
+          color: "#106981",
         };
         return {
           id: `var-${match[1]}`,
@@ -96,6 +97,23 @@ export const NodeBuilder = ({ id, data }) => {
                 value={fieldState[field.key]}
                 onChange={(e) => handleChange(field.key, e.target.value)}
               />
+            </label>
+          );
+        }
+        if (field.type === "select") {
+          return (
+            <label key={field.key}>
+              {field.label}
+              <select
+                value={fieldState[field.key]}
+                onChange={(e) => handleChange(field.key, e.target.value)}
+              >
+                {field.options?.map((option) => (
+                  <option key={option} value={option}>
+                    {option}
+                  </option>
+                ))}
+              </select>
             </label>
           );
         }
