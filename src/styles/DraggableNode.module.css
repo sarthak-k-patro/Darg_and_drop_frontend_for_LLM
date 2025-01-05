@@ -7,7 +7,7 @@
   justify-content: center;
   flex-direction: column;
   border-radius: 8px;
-  background-color: #00496b;
+  background-color: #106074;
   color: #ffffff;
   transition: transform 0.2s ease, background-color 0.3s ease;
 }
@@ -15,15 +15,21 @@
 .draggableNode:active {
   cursor: grabbing !important;
   transform: scale(1.05);
-  background-color: #086647;
+  background-color: #086647 !important;
 }
 
+.draggableNode:hover {
+  background-color: #02a071;
+}
+:global(.dark) .draggableNode:hover {
+  background-color: #02a071;
+}
 :global(.dark) .draggableNode {
   background-color: #086647;
 }
 
 :global(.dark) .draggableNode:active {
-  background-color: #0d4895;
+  background-color: #00a3a1 !important;
 }
 
 .draggableNodeLabel {
