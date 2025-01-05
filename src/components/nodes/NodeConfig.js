@@ -4,6 +4,8 @@ import {
   FaSignOutAlt,
   FaStickyNote,
 } from "react-icons/fa";
+// Add your new node configurations here, No need to copy the folder multiple times for adding new Nodes.
+// Future Scope: This node config can be appended based on form submission, hence nodes could be added by forms.
 export const nodeConfigs = [
   {
     type: "inputNode",

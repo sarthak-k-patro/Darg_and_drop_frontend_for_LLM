@@ -14,9 +14,9 @@
 }
 .highlightedNode {
   box-shadow: 0 0 0 5px rgba(15, 76, 175, 0.5); /* Light mode highlight color */
-  border-radius: 7%;
+  border-radius: 8%;
   transition: box-shadow 0.2s ease;
 }
 :global(.dark) .highlightedNode {
-  box-shadow: 0 0 0 5px #ff7043; /* Dark mode highlight color */
+  box-shadow: 0 0 0 5px #2a9d8f; /* Dark mode highlight color */
 }
