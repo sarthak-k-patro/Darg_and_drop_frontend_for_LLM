@@ -13,11 +13,11 @@
 
 .baseNode:hover {
   border-color: rgba(15, 76, 175, 0.5);
-  border-width: 5px;
+  border-width: 2px;
 }
 :global(.dark) .baseNode:hover {
   border-color: #2a9d8f;
-  border-width: 5px;
+  border-width: 2px;
 }
 
 :global(.dark) .baseNode {
