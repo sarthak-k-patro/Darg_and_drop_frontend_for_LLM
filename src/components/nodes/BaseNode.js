@@ -1,8 +1,8 @@
 import { Handle, Position } from "reactflow";
 import { motion } from "framer-motion";
-import { useStore } from "../../store";
+import { useStore } from "../../state-management/store";
 import { FaTimes } from "react-icons/fa";
-import styles from "../../styles/BaseNode.module.css";
+import styles from "../../styles/baseNode.module.css";
 
 export const BaseNode = ({
   id,

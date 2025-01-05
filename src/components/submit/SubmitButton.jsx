@@ -1,5 +1,5 @@
-import { useStore } from "./store";
-import styles from "./submit.module.css";
+import { useStore } from "../../state-management/store";
+import styles from "../../styles/submit.module.css";
 export const SubmitButton = () => {
   const { nodes, edges } = useStore((state) => ({
     nodes: state.nodes,

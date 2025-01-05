@@ -1,6 +1,6 @@
-import { DraggableNode } from "../DraggableNode";
+import { DraggableNode } from "../../components/draggable-node/DraggableNode";
 import { useState, useEffect } from "react";
-import styles from "../../styles/Toolbar.module.css";
+import styles from "../../styles/pipelineToolbar.module.css";
 import { FaMoon, FaSun } from "react-icons/fa";
 import { nodeConfigs } from "../../components/nodes/NodeConfig";
 

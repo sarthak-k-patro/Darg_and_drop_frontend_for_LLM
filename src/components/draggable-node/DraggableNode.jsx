@@ -1,4 +1,4 @@
-import styles from "../styles/DraggableNode.module.css";
+import styles from "../../styles/draggableNode.module.css";
 
 // The Draggable nodes in the toolbar (top bar where nodes are present)
 export const DraggableNode = ({ type, label, icon }) => {
