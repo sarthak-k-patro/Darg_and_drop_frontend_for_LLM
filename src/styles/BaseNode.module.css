@@ -36,6 +36,8 @@
 }
 
 .handleSource {
+  position: absolute;
+  top: 40px !important;
   background-color: #106981 !important;
 }
 
@@ -114,4 +116,25 @@
   position: relative;
   font-size: 1.1rem;
   pointer-events: none;
+}
+
+.closIcon {
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  color: rgba(0, 0, 0, 0.5);
+  /* background-color: #ec7777; */
+  border-radius: 50%;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+.closIcon:hover {
+  background-color: rgb(247, 151, 151);
 }

@@ -1,5 +1,7 @@
 import { Handle, Position } from "reactflow";
 import { motion } from "framer-motion";
+import { useStore } from "../../store";
+import { FaTimes } from "react-icons/fa";
 import styles from "../../styles/BaseNode.module.css";
 
 export const BaseNode = ({
@@ -12,6 +14,7 @@ export const BaseNode = ({
   style = {},
   selected = false,
 }) => {
+  const removeNode = useStore((state) => state.removeNode);
   const defaultOffset = 20;
   const spacing = 30;
 
@@ -20,6 +23,9 @@ export const BaseNode = ({
       className={`${styles.baseNode} ${selected ? styles.selectedNode : ""}`}
       style={style}
     >
+      <div className={styles.closIcon} onClick={() => removeNode(id)}>
+        <FaTimes />
+      </div>
       {icon && <div className={styles.nodeIcon}>{icon}</div>}
       {inputHandles.map((h, i) => {
         const topPosition = h.style?.top ?? defaultOffset + i * spacing;
