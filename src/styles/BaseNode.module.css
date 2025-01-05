@@ -16,7 +16,7 @@
   border-width: 5px;
 }
 :global(.dark) .baseNode:hover {
-  border-color: rgb(243, 219, 0);
+  border-color: #2a9d8f;
   border-width: 5px;
 }
 
